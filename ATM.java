@@ -6,6 +6,14 @@ public class ATM {
         int i;
         @SuppressWarnings("resource")
         Scanner s = new Scanner(System.in);
+        String pin = "1234";
+        String inputPin;    
+        System.out.print("Enter your pin: ");
+        inputPin = s.nextLine();    
+        if (!inputPin.equals(pin)) {
+            System.out.println("Invalid pin!");
+            return;
+        }                           
 
         while (true) {
             System.out.println("\nATM Menu:");
@@ -53,5 +61,6 @@ public class ATM {
                 break;
             }
         }
+
     }
 }
